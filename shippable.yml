@@ -1,5 +1,7 @@
 python:
   - "2.7"
 language: python
-script:
-  - python sample.py
+before_script: mkdir -p shippable/codecoverage
+script: 
+  - coverage run --branch python/sample.py
+  - coverage xml -o shippable/codecoverage/coverage.xml python/sample.py
