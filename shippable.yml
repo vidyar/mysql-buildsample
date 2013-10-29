@@ -3,5 +3,5 @@ python:
 language: python
 before_script: mkdir -p shippable/codecoverage
 script: 
-  - coverage run --branch python/sample.py
-  - coverage xml -o shippable/codecoverage/coverage.xml python/sample.py
+  - coverage run --branch sample.py
+  - coverage xml -o shippable/codecoverage/coverage.xml sample.py
