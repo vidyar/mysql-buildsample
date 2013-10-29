@@ -1,4 +1,3 @@
-#mySql build sample
 import MySQLdb
 
 db = MySQLdb.connect("localhost","root","qhode25")
