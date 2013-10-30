@@ -1,7 +1,7 @@
 python:
   - "2.7"
 language: python
-before_script: mkdir -p shippable/codecoverage
+before_script: sudo pip install mysql-python
 script: 
-  - coverage run --branch sample.py
-  - coverage xml -o shippable/codecoverage/coverage.xml sample.py
+  - python sample.py
+  
