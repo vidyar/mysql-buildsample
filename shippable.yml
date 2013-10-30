@@ -1,6 +1,6 @@
 language: python
 python:
  - "2.7"
-install: pip install --use-mirrors -r requirements.txt
+install: easy_install-2.7 mysql-python
 script:
  - python sample.py
