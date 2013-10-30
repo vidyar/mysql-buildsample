@@ -1,7 +1,8 @@
-python:
-  - "2.7"
 language: python
-install: apt-get install python-mysqldb
-script: 
-  - python sample.py
-  
+python:
+ - "2.7"
+services: 
+ - memcached 
+install: pip install --use-mirrors -r requirements.txt
+script:
+ - python sample.py
