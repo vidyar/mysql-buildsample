@@ -1,7 +1,7 @@
 #mysql-buildsamples
-import MySQLdb
+import MySQL-python
 
-db = MySQLdb.connect("localhost","root","qhode25")
+db = MySQL-python.connect("localhost","root","qhode25")
 cursor = db.cursor()
 cursor.execute("DROP DATABASE IF EXISTS TESTDB")
 
