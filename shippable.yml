@@ -1,6 +1,6 @@
 language: python
 python:
  - "2.7"
-install: easy_install-2.7 mysql-python
+install: pip install MySQL-python
 script:
  - python sample.py
