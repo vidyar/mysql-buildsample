@@ -1,15 +1,13 @@
 #mysql-buildsamples
 import MySQLdb
 
-db = MySQLdb.connect("localhost","P312D2EEF5B6D6BA57","POOZqLJDhjGh9!")
+db = MySQLdb.connect("localhost","root","qhode25")
 cursor = db.cursor()
 cursor.execute("DROP DATABASE IF EXISTS TESTDB")
 
 cursor.execute("CREATE DATABASE TESTDB")
 
 cursor.execute("USE TESTDB")
-
-cursor.execute("DROP TABLE IF EXISTS EMPLOYEE")
 
 #creating TABLE
 sql1 = """CREATE TABLE EMPLOYEE (
