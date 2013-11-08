@@ -1,7 +1,7 @@
 #mysql-buildsamples
 import MySQLdb
 
-db = MySQLdb.connect("localhost","root","qhode25")
+db = MySQLdb.connect("127.0.0.1","shippable","")
 cursor = db.cursor()
 cursor.execute("DROP DATABASE IF EXISTS TESTDB")
 
@@ -11,17 +11,15 @@ cursor.execute("USE TESTDB")
 
 #creating TABLE
 sql1 = """CREATE TABLE EMPLOYEE (
-         FIRST_NAME  CHAR(20) NOT NULL,
-         LAST_NAME  CHAR(20),
-         AGE INT,  
-         SEX CHAR(1),
+         NAME  CHAR(20) NOT NULL,
+         AGE INT
          INCOME FLOAT )"""
 cursor.execute(sql1)
 
 #inserting VALUES
-sql2 = """INSERT INTO EMPLOYEE(FIRST_NAME,
-         LAST_NAME, AGE, SEX, INCOME)
-         VALUES ('Mac', 'Mohan', 20, 'M', 2000)"""
+sql2 = """INSERT INTO EMPLOYEE(NAME,
+         AGE, INCOME)
+         VALUES ('Mohan', 20, 5000)"""
 try:
    cursor.execute(sql2)
    db.commit()
@@ -36,13 +34,11 @@ try:
    cursor.execute(sql3)
    results = cursor.fetchall()
    for row in results:
-      fname = row[0]
-      lname = row[1]
-      age = row[2]
-      sex = row[3]
-      income = row[4]
-      print "fname=%s,lname=%s,age=%d,sex=%s,income=%d" % \
-             (fname, lname, age, sex, income )
+      name = row[0]
+      age = row[1]
+      income = row[2]
+      print "name=%s,age=%d,income=%d" % \
+             (name, age, income )
 except:
    print "Error: unable to fecth data"
    
