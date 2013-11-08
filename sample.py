@@ -1,7 +1,7 @@
 #mySql build sample
 import MySQLdb
 
-db = MySQLdb.connect("localhost","root","qhode25")
+db = MySQLdb.connect("127.0.0.1","shippable")
 cursor = db.cursor()
 cursor.execute("DROP DATABASE IF EXISTS TESTDB")
 
