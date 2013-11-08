@@ -1,7 +1,7 @@
 #mysql-buildsamples
 import MySQLdb
 
-db = MySQLdb.connect("127.0.0.1","shippable","")
+db = MySQLdb.connect("127.0.0.1","shippable")
 cursor = db.cursor()
 cursor.execute("DROP DATABASE IF EXISTS TESTDB")
 
@@ -12,7 +12,7 @@ cursor.execute("USE TESTDB")
 #creating TABLE
 sql1 = """CREATE TABLE EMPLOYEE (
          NAME  CHAR(20) NOT NULL,
-         AGE INT
+         AGE INT,
          INCOME FLOAT )"""
 cursor.execute(sql1)
 
