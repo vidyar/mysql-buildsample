@@ -2,9 +2,7 @@ language: python
 python:
  - "2.7"
 install: pip install --use-mirrors -r requirements.txt
-
-
-
-
+notifications:
+  email: vidyac.raghav@gmail.com
 script:
  - python sample.py
