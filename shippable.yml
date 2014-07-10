@@ -7,3 +7,4 @@ notifications:
   email: false
 script:
  - python sample.py
+ - curl -XPOST https://apibeta.shippable.com/projects/53a519783b73579d01852c1b/build?token=$SHIPPABLE_API_TOKEN
