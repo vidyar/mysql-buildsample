@@ -3,7 +3,7 @@ import MySQLdb
 
 db = MySQLdb.connect("127.0.0.1","shippable")
 cursor = db.cursor()
-cursor.execute("DROP DATABASE IF EXISTS TESTDB")
+cursor.execute("DROP DATABASE IF EXISTS TEST-DB")
 
 cursor.execute("CREATE DATABASE TEST-DB")
 
