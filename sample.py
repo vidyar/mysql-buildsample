@@ -5,9 +5,9 @@ db = MySQLdb.connect("127.0.0.1","shippable")
 cursor = db.cursor()
 cursor.execute("DROP DATABASE IF EXISTS TESTDB")
 
-cursor.execute("CREATE DATABASE TESTDB")
+cursor.execute("CREATE DATABASE TEST-DB")
 
-cursor.execute("USE TESTDB")
+cursor.execute("USE TEST-DB")
 
 cursor.execute("DROP TABLE IF EXISTS EMPLOYEE")
 
